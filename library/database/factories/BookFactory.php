@@ -14,10 +14,14 @@ class BookFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition(): array
+    
+        public function definition(): array
     {
         return [
-            //
+            'author' => fake('hu_hu')->name(),
+            'title' => fake('hu_hu')->sentence(),
+            'pieces' => rand(20, 201),
         ];
     }
+    
 }
